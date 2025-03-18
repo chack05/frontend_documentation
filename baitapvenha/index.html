@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:hsl(0, 100%, 99%);
+        }
+        .circle {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .circle::after{
+            content: '';
+            border: 2px solid black;
+            border-radius: 50%;
+            width: 485px;
+            aspect-ratio: 1/1;
+            
+        }
+        .gif {
+            position: absolute;
+            animation: chuyendongtron 10s linear infinite;
+        }
+        @keyframes chuyendongtron {
+            0% {
+                transform: rotate(0deg)  translateX(200px)  rotate(270deg) ;
+            }
+            100% {
+                transform: rotate(360deg) translateX(200px)  rotate(270deg); 
+
+               
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="circle">
+        <div class="gif"><img src="public/img/dog-12565_512.gif" alt="" width="200px" height="200px"></div>
+    </div>
+</body>
+</html>
